@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Albacore.StartMenuCompanion.Sample (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Albacore.StartMenuCompanion.Sample (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

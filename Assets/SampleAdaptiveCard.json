@@ -1,0 +1,191 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.1",
+  "id": "Weather_Preview_LockScreen_LockScreen",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "6px"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Container",
+              "items": [
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "type": "Column",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "weight": "Bolder",
+                          "text": "Hell",
+                          "wrap": true,
+                          "maxLines": 1,
+                          "color": "Default"
+                        },
+                        {
+                          "type": "ColumnSet",
+                          "columns": [
+                            {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [
+                                {
+                                  "type": "Image",
+                                  "height": "32px",
+                                  "url": "https://assets.msn.com/weathermapdata/1/static/weather/Icons/LFlOFwA=/Condition/AAehR3S.png",
+                                  "altText": "Sunny",
+                                  "lottieAnimation": "Sunny"
+                                }
+                              ],
+                              "verticalContentAlignment": "Center"
+                            },
+                            {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [
+                                {
+                                  "type": "TextBlock",
+                                  "size": "ExtraLarge",
+                                  "text": "67",
+                                  "horizontalAlignment": "Center",
+                                  "wrap": true,
+                                  "spacing": "None",
+                                  "separator": true
+                                }
+                              ],
+                              "verticalContentAlignment": "Center"
+                            },
+                            {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [
+                                {
+                                  "type": "TextBlock",
+                                  "text": "°F",
+                                  "wrap": true,
+                                  "spacing": "Small"
+                                },
+                                {
+                                  "type": "TextBlock",
+                                  "text": " ",
+                                  "wrap": true,
+                                  "spacing": "Small"
+                                }
+                              ],
+                              "verticalContentAlignment": "Center",
+                              "spacing": "Small"
+                            },
+                            {
+                              "type": "Column",
+                              "width": "auto",
+                              "items": [
+                                {
+                                  "type": "Image",
+                                  "size": "Small",
+                                  "url": "https://assets.msn.com/weathermapdata/1/static/weather/Icons/LFlOFwA=/Alert/Alert_TL_Y.png",
+                                  "horizontalAlignment": "Left",
+                                  "altText": "Low temperature",
+                                  "height": "16px"
+                                }
+                              ],
+                              "verticalContentAlignment": "Center"
+                            },
+                            {
+                              "type": "Column",
+                              "width": "stretch",
+                              "items": [
+                                {
+                                  "type": "TextBlock",
+                                  "size": "Small",
+                                  "text": "Low temperature",
+                                  "wrap": true,
+                                  "maxLines": 3
+                                }
+                              ],
+                              "verticalContentAlignment": "Center"
+                            }
+                          ],
+                          "spacing": "Medium"
+                        },
+                        {
+                          "type": "TextBlock",
+                          "weight": "Bolder",
+                          "color": "Accent",
+                          "text": "See full forecast",
+                          "horizontalAlignment": "Center"
+                        }
+                      ],
+                      "width": "stretch"
+                    }
+                  ],
+                  "selectAction": {
+                    "type": "Action.OpenUrl",
+                    "url": "https://ntp.msn.com/edge/ntp?cm=en-us&ocid=widgetonlockscreen&segment=Weather&scenario=SevereWeather",
+                    "title": "See full forecast"
+                  }
+                },
+                {
+                  "type": "ColumnSet",
+                  "columns": [
+                    {
+                      "id": "LargeTicker1",
+                      "type": "Column",
+                      "width": "auto",
+                      "items": [
+                        {
+                          "id": "BadgeAnchorLargeTicker",
+                          "type": "Image",
+                          "height": "32px",
+                          "url": "https://assets.msn.com/weathermapdata/1/static/finance/1stparty/FinanceTaskbarIcons/Finance_Stock_Increase_Decrease/Finance_stock_up_green_72x72.png",
+                          "horizontalAlignment": "Center",
+                          "isAnimated": false,
+                          "animationCount": 0,
+                          "frameIntervalInMs": 0,
+                          "animationDurationInMs": 0,
+                          "animationSvgSize": 0
+                        }
+                      ],
+                      "verticalContentAlignment": "Center",
+                      "spacing": "None"
+                    },
+                    {
+                      "id": "LargeTicker2",
+                      "type": "Column",
+                      "width": "auto",
+                      "items": [
+                        {
+                          "type": "TextBlock",
+                          "text": "VIX",
+                          "spacing": "None"
+                        },
+                        {
+                          "type": "TextBlock",
+                          "color": "Good",
+                          "isSubtle": false,
+                          "text": "+1.15%",
+                          "spacing": "None"
+                        }
+                      ]
+                    }
+                  ],
+                  "spacing": "ExtraLarge"
+                }
+              ],
+              "spacing": "None"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

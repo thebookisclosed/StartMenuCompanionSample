@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity
+    Name="Albacore.StartMenuCompanion.Sample"
+    Publisher="CN=Nitro"
+    Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="f8120e8f-4be2-46e3-9d1d-eb5b69088acc" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Start Menu Companion (Sample)</DisplayName>
+    <PublisherDisplayName>Albacore</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Start Menu Companion (Sample)"
+        Description="Albacore.StartMenuCompanion.Sample"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap3:Extension Category="windows.appExtension">
+          <uap3:AppExtension Name="com.microsoft.startmenucompanion" Id="Albacore.StartMenuCompanionSample" DisplayName="Albacore's Start Menu Companion" Description="Start Menu Companion (Sample)" PublicFolder="Public">
+            <uap3:Properties>
+              <AdaptiveCardAppDataLocalRelativePath>StartMenu\StartMenuCompanion.json</AdaptiveCardAppDataLocalRelativePath>
+              <PlacementPreference>Left</PlacementPreference>
+              <RefreshCardLaunchUri>ms-phone:startup?ref=StartMenu</RefreshCardLaunchUri>
+              <Icon>ms-appx:///Assets/StoreLogo.png</Icon>
+              <CompanionSettingName>Albacore's Start Menu Companion</CompanionSettingName>
+              <CompanionSettingExtendedName>Start Menu Companion (Sample)</CompanionSettingExtendedName>
+              <DetailedSettingsSettingName>Want to build your own?</DetailedSettingsSettingName>
+              <DetailedSettingsLaunchName>Check out the sample on GitHub</DetailedSettingsLaunchName>
+              <DetailedSettingsLaunchUri>https://github.com/thebookisclosed/StartMenuCompanionSample</DetailedSettingsLaunchUri>
+              <DefaultState>Available</DefaultState>
+            </uap3:Properties>
+          </uap3:AppExtension>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>
